@@ -1,37 +1,32 @@
-# Angular
 
-This directory is a brief example of an [Angular](https://angular.io/) app that can be deployed to Vercel with zero configuration.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
 
-## Deploy Your Own
+# Comic Labs
 
-Deploy your own Angular project with Vercel.
+## Projeto criado utilizando:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/angular&template=angular)
+- Angular 15;
+- Angular CLI 15
+- SCSS;
 
-_Live Example: https://angular-template.vercel.app_
 
-## Development server
+## Instruções
+Clone o projeto:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+`git clone https://github.com/crismantovani/comiclabs.git`
+<br /> <br />
+Entre na pasta: `cd comiclabs`
+<br /> <br />
+Antes de executar o projeto, será necessário criar uma conta no [site da API da Marvel](https://developer.marvel.com/account) e obter as chaves de acesso. Depois disso atualize o arquivo `apis.service.ts`
+<br /> <br />
+Para executar o projeto em modo de desenvolvimento, execute o seguinte comando:
 
-## Code scaffolding
+`npm start` ou `ng serve`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O projeto será ficará disponível no endereço http://localhost:4200.
 
-## Build
+Para executar uma build de produção, utilize os seguintes comandos:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`ng build`
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[Comic Labs @Vercel](https://comiclabs.vercel.app/)
