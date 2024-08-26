@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: 4rem;
+  background-color: #202020;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.header__nav__item {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+.header__nav__item a {
+  color: #ffffff;
+
+  text-decoration: none;
+}
+
+.header__nav__item a:hover {
+  color: #f0141e;
+  transition: 0.5s;
+}

@@ -1,0 +1,74 @@
+<div class="container__search">
+  <input
+    class="container__search__input"
+    type="text"
+    required
+    name="characterName"
+    id="characterName"
+    placeholder="Digite o nome do(a) personagem e aperte 'Enter'..."
+    aria-label="Digite o nome do(a) personagem e aperte 'Enter'..."
+    (keyup)="findCharacter($event)"
+  />
+</div>
+
+<div class="container" *ngIf="!showSearchResult">
+  <div class="container__wrapper">
+    <div class="container__card" *ngFor="let characters of allCharacters">
+      <div>
+        <h2 class="container__card__title">{{ characters.name }}</h2>
+        <div class="container__card__photo">
+          <img
+            src="{{
+              characters.thumbnail.path +
+                '/standard_medium.' +
+                characters.thumbnail.extension
+            }}"
+            class="container__card__image"
+            alt="Ocorreu algum erro. Tente novamente."
+          />
+        </div>
+        <div class="container__card__footer">
+          <button
+            class="container__card__footer__btn"
+            type="button"
+            [routerLink]="['/comics', characters.id]"
+            (click)="fetchComicsByCharacter(characters.id)"
+          >
+            Comics
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="showSearchResult">
+  <div class="container__wrapper">
+    <div class="container__card" *ngFor="let characters of searchedCharacter">
+      <div>
+        <h2 class="container__card__title">{{ characters.name }}</h2>
+        <div class="container__card__photo">
+          <img
+            src="{{
+              characters.thumbnail.path +
+                '/standard_medium.' +
+                characters.thumbnail.extension
+            }}"
+            class="container__card__image"
+            alt="Ocorreu algum erro. Tente novamente."
+          />
+        </div>
+        <div class="container__card__footer">
+          <button
+            [routerLink]="['/comics', characters.id]"
+            class="container__card__footer__btn"
+            type="button"
+            (click)="fetchComicsByCharacter(characters.id)"
+          >
+            Comics
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
