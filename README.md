@@ -5,9 +5,9 @@
 
 ## Projeto criado utilizando:
 
-- Angular 15;
+- Angular 15
 - Angular CLI 15
-- SCSS;
+- SCSS
 
 
 ## Instruções
